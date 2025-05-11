@@ -15,11 +15,11 @@ For more details about the project, you can take a look at my [thesis](/thesis.p
 ---
 ## 🛠️ Prerequisites
 
-* **CMake** 3.10 or newer
-* **C++ Compiler** with C++11 (or newer) support (Clang)
+* **CMake** 3.5 or newer
+* **C++ Compiler** with C++20 (or newer) support (Clang)
 * **GNU Make** or **Ninja** (or your preferred CMake generator)
 * **Git** (to clone the repository and initialize submodules)
-* **Boost** 1.65 or newer (Boost header-only libraries and compiled modules)
+* **Boost** (Boost header-only libraries and compiled modules)
 
 ## 📥 Installation & Build
 
