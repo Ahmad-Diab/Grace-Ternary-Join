@@ -1,0 +1,5 @@
+custom-db
+table-name,cardinality,attr1,attr2
+twitter_R,2420766,a,b
+twitter_R,2420766,b,c
+twitter_R,2420766,a,c

@@ -1,0 +1,33 @@
+set(BENCHMARK_DIR ${CMAKE_SOURCE_DIR}/benchmark)
+
+# Add executable benchmarks
+
+add_executable(facebook_ternary_benchmark ${BENCHMARK_DIR}/FacebookTernaryBenchmark.cpp)
+target_link_libraries(facebook_ternary_benchmark PRIVATE external_join_lib)
+
+add_executable(facebook_binary_benchmark ${BENCHMARK_DIR}/FacebookBinaryBenchmark.cpp)
+target_link_libraries(facebook_binary_benchmark PRIVATE external_join_lib)
+
+add_executable(twitter_ternary_benchmark ${BENCHMARK_DIR}/TwitterBenchmarkTernary.cpp)
+target_link_libraries(twitter_ternary_benchmark PRIVATE external_join_lib)
+
+add_executable(twitter_binary_benchmark ${BENCHMARK_DIR}/TwitterBenchmarkBinary.cpp)
+target_link_libraries(twitter_binary_benchmark PRIVATE external_join_lib)
+
+add_executable(wiki_ternary_benchmark ${BENCHMARK_DIR}/WikiBenchmarkTernary.cpp)
+target_link_libraries(wiki_ternary_benchmark PRIVATE external_join_lib)
+
+add_executable(wiki_binary_benchmark ${BENCHMARK_DIR}/WikiBenchmarkBinary.cpp)
+target_link_libraries(wiki_binary_benchmark PRIVATE external_join_lib)
+
+add_executable(livejournal_ternary_benchmark ${BENCHMARK_DIR}/LiveJournalTernary.cpp)
+target_link_libraries(livejournal_ternary_benchmark PRIVATE external_join_lib)
+
+add_executable(livejournal_binary_benchmark ${BENCHMARK_DIR}/LiveJournalBinary.cpp)
+target_link_libraries(livejournal_binary_benchmark PRIVATE external_join_lib)
+
+add_executable(twitch_ternary_benchmark ${BENCHMARK_DIR}/TwitchBenchmarkTernary.cpp)
+target_link_libraries(twitch_ternary_benchmark PRIVATE external_join_lib)
+
+add_executable(twitch_binary_benchmark ${BENCHMARK_DIR}/TwitchBenchmarkBinary.cpp)
+target_link_libraries(twitch_binary_benchmark PRIVATE external_join_lib)

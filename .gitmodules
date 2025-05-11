@@ -1,0 +1,6 @@
+[submodule "third-party/mio"]
+	path = third-party/mio
+	url = git@github.com:vimpunk/mio.git
+[submodule "third-party/robin-hood-hashing"]
+	path = third-party/robin-hood-hashing
+	url = git@github.com:martinus/robin-hood-hashing.git

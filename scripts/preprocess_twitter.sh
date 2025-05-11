@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+RED='\033[0;31m';    GREEN='\033[0;32m'
+YELLOW='\033[1;33m'; BLUE='\033[0;34m'
+CYAN='\033[0;36m';   NC='\033[0m'
+
+URL="https://snap.stanford.edu/data/twitter_combined.txt.gz"
+ARCHIVE="twitter_combined.txt.gz"
+RAW="twitter_combined.txt"
+BIN="parse_tuples"
+
+echo -e "${CYAN}Downloading${NC} ${YELLOW}$URL${NC} …"
+wget -q --show-progress -O "$ARCHIVE" "$URL"
+
+echo -e "${CYAN}Uncompressing${NC} ${YELLOW}$ARCHIVE${NC} …"
+gunzip -f "$ARCHIVE"
+
+echo -e "${CYAN}Normalizing whitespace → commas in${NC} ${YELLOW}$RAW${NC} …"
+tr -s ' \t' ',' < "$RAW" > "${RAW}.tmp"
+mv "${RAW}.tmp" "$RAW"
+
+echo -e "${BLUE}Running${NC} ./${BIN} on ${YELLOW}$RAW${NC} …"
+./"$BIN" "$RAW" ../benchmark/resources/twitter/twitter_R.bin
+
+mv "$RAW" ../benchmark/resources/twitter/twitter.csv
+echo -e "${GREEN}Processed data is in${NC} ${YELLOW}/benchmark/resources/twitter/${NC}"

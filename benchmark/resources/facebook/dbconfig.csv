@@ -1,0 +1,5 @@
+custom-db
+table-name,cardinality,attr1,attr2
+facebook_R,88234,a,b
+facebook_R,88234,b,c
+facebook_R,88234,a,c

@@ -1,0 +1,9 @@
+/cmake-build-*
+/.idea
+/build
+/CMakeFiles
+*perf*
+/venv
+*.bin
+*.csv
+*.db
