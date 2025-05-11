@@ -83,6 +83,12 @@ We conducted two experiments:
 
 We conducted our benchmarks on five real-world graphs: `facebook`, `twitter`, `twitch`, `wiki`, `livejournal`. All benchmarks use a single thread.
 
+> **⚠️ Warning:** If the join process crashes unexpectedly (e.g., due to insufficient disk space), the temporary directories under `/tmp/external-join-dir-*` may not be removed. To clean up any leftover files, run:
+>
+> ```bash
+> rm -r /tmp/external-join-dir-*
+> ```
+
 ---
 
 ### 1. Prepare the datasets
